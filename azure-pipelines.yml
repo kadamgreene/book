@@ -25,7 +25,7 @@ steps:
   workingDirectory: backend
   displayName: 'backend tests'
 
-- script: dotnet publish --c $(buildConfiguration) --self-contained true -r win-x86
+- script: dotnet publish -c $(buildConfiguration) --self-contained true -r win-x86
   workingDirectory: backend
   displayName: 'backend publish'
 
