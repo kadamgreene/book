@@ -14,7 +14,7 @@ test('When mapQuestionFromServer is called with question, created should be turn
     title: "test",
     content: "test",
     userName: "test",
-    created: new Date(2021, 0, 1, 0, 0, 0, 0),
+    created: new Date(Date.UTC(2021, 0, 1, 0, 0, 0, 0)),
     answers: []
   });
 });
@@ -38,12 +38,12 @@ test('When mapQuestionFromServer is called with question and answers, created sh
     title: "test",
     content: "test",
     userName: "test",
-    created: new Date(2021, 0, 1, 0, 0, 0, 0),
+    created: new Date(Date.UTC(2021, 0, 1, 0, 0, 0, 0)),
     answers: [{
       answerId: 1,
       content: "test",
       userName: "test",
-      created: new Date(2021, 0, 1, 0, 0, 0, 0),
+      created: new Date(Date.UTC(2021, 0, 1, 0, 0, 0, 0)),
     }]
   });
 });

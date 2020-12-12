@@ -18,12 +18,13 @@ describe('Ask question', () => {
     cy.get('form').submit();
 
     cy.contains('Unanswered Questions');
-      
+
     cy.contains('Ask a question').click();
     cy.contains('Ask a question');
 
     var title = 'title test';
-    var content = 'Lots and lots and lots and lots and lots of content test';
+    var content =
+      'Lots and lots and lots and lots and lots of content test';
     cy.findByLabelText('Title')
       .type(title)
       .should('have.value', title);
@@ -32,10 +33,11 @@ describe('Ask question', () => {
       .should('have.value', content);
 
     cy.contains('Submit Your Question').click();
-    cy.contains('Your question was successfully submitted');
-      
+    cy.contains(
+      'Your question was successfully submitted',
+    );
+
     cy.contains('Sign Out').click();
     cy.contains('You successfully signed out!');
-
   });
 });
